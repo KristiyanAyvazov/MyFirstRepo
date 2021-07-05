@@ -36,7 +36,13 @@ while ( $i <= 100) {
 	$i++;
 }
 
-foreach ( range( 0,12 ) as $key) {
+foreach ( range( 0,100 ) as $key) {
+
+	if ( ($key % 3 == 0) && ($i % 5 == 0) ) {
+		echo 'FooBar';
+		echo "\n";
+	}
+
 	if ( $key % 3 == 0 ) {
 		echo 'Foo';
 		echo "\n";
@@ -44,11 +50,6 @@ foreach ( range( 0,12 ) as $key) {
 
 	if ( $key % 5 == 0 ) {
 		echo 'Bar';
-		echo "\n";
-	}
-
-	if ( $key % 3 == 0 && $i % 5 == 0 ) {
-		echo 'FooBar';
 		echo "\n";
 	}
 }
